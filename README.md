@@ -1,5 +1,22 @@
 # PromoQuote AI
 
+> **⚠ Portfolio showcase — viewing only. All rights reserved.**
+>
+> This repository is published as a public case study of the author's work. The source code is provided **for viewing through the GitHub interface only**.
+>
+> The following are **prohibited** without prior written permission from the copyright holder:
+> - Cloning, downloading, copying, forking, or mirroring the repository
+> - Modifying the code or creating derivative works — **regardless of the extent of modification**
+> - Refactoring, renaming, restructuring, translating to another language, or extracting partial components
+> - Distributing, redistributing, sublicensing, selling, or offering for sale, including any modified version
+> - Using the code, in whole or in part, in any commercial product, service, or internal business operation
+> - Using the code to train, fine-tune, or prompt machine learning models or AI systems
+> - Re-licensing under any other license
+>
+> A work that is substantially similar in structure, organization, naming, or expression to this code is a derivative work and remains covered by this license, **even if substantially rewritten or translated to another language**.
+>
+> See [LICENSE](LICENSE) for full terms. For licensing inquiries or custom development: **formatia.melodic.fagaras@gmail.com**
+
 AI-assisted quotation platform for promotional product distributors. Built around a chat-first workflow: search ~80k products from multiple supplier feeds, build quotes with the AI, lock supplier prices at quote creation, and generate professional PDFs.
 
 <p align="center">
