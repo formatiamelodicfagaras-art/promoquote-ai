@@ -1,0 +1,46 @@
+services:
+  meilisearch:
+    image: getmeili/meilisearch:v1.10
+    restart: unless-stopped
+    environment:
+      MEILI_NO_ANALYTICS: "true"
+      MEILI_ENV: development
+    volumes:
+      - meili_data:/meili_data
+    ports:
+      - "7700:7700"
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    depends_on:
+      - meilisearch
+    environment:
+      DATABASE_URL: "sqlite+aiosqlite:///./data/promoquote.db"
+      JWT_SECRET: "${JWT_SECRET:-change-me-please-set-JWT_SECRET-env-var}"
+      ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY:-}"
+      MEILISEARCH_URL: "http://meilisearch:7700"
+      MEILISEARCH_API_KEY: ""
+      MEILISEARCH_ENABLED: "true"
+      IMG_CACHE_DIR: "./data/img_cache"
+    volumes:
+      - backend_data:/app/data
+      - backend_uploads:/app/uploads
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: "/api"
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+
+volumes:
+  meili_data:
+  backend_data:
+  backend_uploads:

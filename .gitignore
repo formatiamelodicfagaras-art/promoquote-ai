@@ -1,0 +1,58 @@
+# ── Python ──────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+venv/
+.venv/
+env/
+
+# ── Node / Next.js ──────────────────────────────────────────────────
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+.npm/
+.pnp.*
+
+# ── Env / secrets ───────────────────────────────────────────────────
+.env
+.env.local
+.env.production
+.env.development
+*.secret
+*.key
+*.pem
+
+# ── Databases / data ────────────────────────────────────────────────
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+data/
+uploads/
+meili_data/
+backend/data/
+backend/uploads/
+
+# ── Build output ────────────────────────────────────────────────────
+dist/
+build/
+*.tar.gz
+
+# ── OS / editor ─────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Misc ────────────────────────────────────────────────────────────
+*.log
+.coverage
+htmlcov/

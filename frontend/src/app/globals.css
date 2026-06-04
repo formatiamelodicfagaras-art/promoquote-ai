@@ -1,0 +1,550 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ═══════════════════════════════════════════
+     THEME: Dark (Întuneric) — Default
+     Indigo glassmorphism
+     ═══════════════════════════════════════════ */
+  :root,
+  [data-theme="dark"] {
+    --c-50: #f0f0f5;
+    --c-100: #9898b0;
+    --c-200: #6b6b85;
+    --c-300: #3a3a55;
+    --c-400: #252540;
+    --c-500: #1e1e32;
+    --c-600: #1a1a2e;
+    --c-700: #16162a;
+    --c-800: #12121a;
+    --c-900: #0a0a0f;
+
+    --accent: #6366f1;
+    --accent-hover: #818cf8;
+    --accent-subtle: rgba(99, 102, 241, 0.12);
+    --accent-muted: rgba(99, 102, 241, 0.06);
+
+    --border: rgba(255, 255, 255, 0.06);
+    --border-strong: rgba(255, 255, 255, 0.12);
+    --scrollbar: rgba(255, 255, 255, 0.08);
+    --scrollbar-hover: rgba(255, 255, 255, 0.15);
+    --glass-bg: rgba(22, 22, 42, 0.8);
+    --glass-card-bg: rgba(30, 30, 50, 0.6);
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --code-bg: rgba(99, 102, 241, 0.15);
+    --pre-bg: rgba(0, 0, 0, 0.4);
+
+    --success: #22c55e;
+    --success-subtle: rgba(34, 197, 94, 0.12);
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --user-bubble: #6366f1;
+    --ai-bubble: #1e1e32;
+
+    color-scheme: dark;
+  }
+
+  /* ═══════════════════════════════════════════
+     THEME: Light (Luminos) — Apple-style
+     Clean whites, SF-style blues
+     ═══════════════════════════════════════════ */
+  [data-theme="light"] {
+    --c-50: #1d1d1f;
+    --c-100: #48484a;
+    --c-200: #8e8e93;
+    --c-300: #aeaeb2;
+    --c-400: #d1d1d6;
+    --c-500: #e5e5ea;
+    --c-600: #ebebf0;
+    --c-700: #f2f2f7;
+    --c-800: #f9f9fb;
+    --c-900: #ffffff;
+
+    --accent: #007aff;
+    --accent-hover: #0a84ff;
+    --accent-subtle: rgba(0, 122, 255, 0.10);
+    --accent-muted: rgba(0, 122, 255, 0.05);
+
+    --border: rgba(0, 0, 0, 0.08);
+    --border-strong: rgba(0, 0, 0, 0.15);
+    --scrollbar: rgba(0, 0, 0, 0.10);
+    --scrollbar-hover: rgba(0, 0, 0, 0.20);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-card-bg: rgba(255, 255, 255, 0.70);
+    --card-shadow: rgba(0, 0, 0, 0.08);
+    --code-bg: rgba(0, 122, 255, 0.10);
+    --pre-bg: rgba(0, 0, 0, 0.04);
+
+    --success: #34c759;
+    --success-subtle: rgba(52, 199, 89, 0.12);
+    --warning: #ff9500;
+    --danger: #ff3b30;
+    --user-bubble: #007aff;
+    --ai-bubble: #f2f2f7;
+
+    color-scheme: light;
+  }
+
+  /* ═══════════════════════════════════════════
+     THEME: Graphite (Grafit) — Apple warm dark
+     Warm neutrals, teal accent
+     ═══════════════════════════════════════════ */
+  [data-theme="graphite"] {
+    --c-50: #f2f2f7;
+    --c-100: #b0b0b6;
+    --c-200: #8a8a8f;
+    --c-300: #636366;
+    --c-400: #48484a;
+    --c-500: #3a3a3c;
+    --c-600: #2c2c2e;
+    --c-700: #252527;
+    --c-800: #1c1c1e;
+    --c-900: #000000;
+
+    --accent: #ff9f0a;
+    --accent-hover: #ffb340;
+    --accent-subtle: rgba(255, 159, 10, 0.12);
+    --accent-muted: rgba(255, 159, 10, 0.06);
+
+    --border: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.14);
+    --scrollbar: rgba(255, 255, 255, 0.10);
+    --scrollbar-hover: rgba(255, 255, 255, 0.18);
+    --glass-bg: rgba(28, 28, 30, 0.85);
+    --glass-card-bg: rgba(44, 44, 46, 0.65);
+    --card-shadow: rgba(0, 0, 0, 0.25);
+    --code-bg: rgba(255, 159, 10, 0.12);
+    --pre-bg: rgba(0, 0, 0, 0.35);
+
+    --success: #30d158;
+    --success-subtle: rgba(48, 209, 88, 0.12);
+    --warning: #ffd60a;
+    --danger: #ff453a;
+    --user-bubble: #ff9f0a;
+    --ai-bubble: #2c2c2e;
+
+    color-scheme: dark;
+  }
+
+  /* ═══════════════════════════════════════════
+     THEME: Frost — Modern Apple light
+     Cool grays, teal accent, subtle depth
+     ═══════════════════════════════════════════ */
+  [data-theme="frost"] {
+    --c-50: #1a1a1f;
+    --c-100: #3d3d44;
+    --c-200: #6e6e78;
+    --c-300: #a0a0ab;
+    --c-400: #c7c7d0;
+    --c-500: #dddde5;
+    --c-600: #eeeef3;
+    --c-700: #f4f4f8;
+    --c-800: #f8f8fc;
+    --c-900: #fbfbfe;
+
+    --accent: #0d9488;
+    --accent-hover: #14b8a6;
+    --accent-subtle: rgba(13, 148, 136, 0.10);
+    --accent-muted: rgba(13, 148, 136, 0.05);
+
+    --border: rgba(0, 0, 0, 0.06);
+    --border-strong: rgba(0, 0, 0, 0.12);
+    --scrollbar: rgba(0, 0, 0, 0.08);
+    --scrollbar-hover: rgba(0, 0, 0, 0.16);
+    --glass-bg: rgba(251, 251, 254, 0.90);
+    --glass-card-bg: rgba(255, 255, 255, 0.80);
+    --card-shadow: rgba(0, 0, 0, 0.05);
+    --code-bg: rgba(13, 148, 136, 0.08);
+    --pre-bg: rgba(0, 0, 0, 0.03);
+
+    --success: #10b981;
+    --success-subtle: rgba(16, 185, 129, 0.10);
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --user-bubble: #0d9488;
+    --ai-bubble: #f0fdf4;
+
+    color-scheme: light;
+  }
+
+  /* ═══════════════════════════════════════════
+     THEME: Sequoia — Apple Premium (macOS Sequoia / visionOS)
+     Indigo-purple gradient accent, warm luminous panels,
+     frosted glass depth, premium button treatments
+     ═══════════════════════════════════════════ */
+  [data-theme="sequoia"] {
+    --c-50: #1d1d1f;
+    --c-100: #424245;
+    --c-200: #86868b;
+    --c-300: #a1a1a6;
+    --c-400: #c7c7cc;
+    --c-500: #e0e0e5;
+    --c-600: #ececf1;
+    --c-700: #f5f5f7;
+    --c-800: #fafafa;
+    --c-900: #ffffff;
+
+    --accent: #5856d6;
+    --accent-hover: #7674e0;
+    --accent-subtle: rgba(88, 86, 214, 0.10);
+    --accent-muted: rgba(88, 86, 214, 0.05);
+    --accent-gradient: linear-gradient(135deg, #5856d6, #af52de);
+
+    --border: rgba(0, 0, 0, 0.06);
+    --border-strong: rgba(0, 0, 0, 0.10);
+    --scrollbar: rgba(0, 0, 0, 0.08);
+    --scrollbar-hover: rgba(0, 0, 0, 0.18);
+    --glass-bg: rgba(255, 255, 255, 0.72);
+    --glass-card-bg: rgba(255, 255, 255, 0.55);
+    --card-shadow: rgba(0, 0, 0, 0.04);
+    --code-bg: rgba(88, 86, 214, 0.08);
+    --pre-bg: rgba(0, 0, 0, 0.03);
+
+    --success: #34c759;
+    --success-subtle: rgba(52, 199, 89, 0.10);
+    --warning: #ff9500;
+    --danger: #ff3b30;
+    --user-bubble: #5856d6;
+    --ai-bubble: #f2f2f7;
+
+    color-scheme: light;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: var(--scrollbar);
+    border-radius: 3px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover);
+  }
+
+  body {
+    @apply antialiased;
+    background: var(--c-900);
+    color: var(--c-50);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+  }
+
+  .glass-card {
+    background: var(--glass-card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card:hover {
+    border-color: var(--border-strong);
+    box-shadow: 0 8px 32px var(--card-shadow),
+      0 0 0 1px var(--accent-muted);
+    transform: translateY(-1px);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px var(--accent-subtle),
+      0 0 60px var(--accent-muted);
+  }
+
+  .glow-success {
+    box-shadow: 0 0 20px var(--success-subtle),
+      0 0 60px rgba(34, 197, 94, 0.05);
+  }
+
+  .gradient-mesh {
+    background: radial-gradient(
+        ellipse 80% 50% at 50% -20%,
+        var(--accent-subtle),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 80% 50%,
+        var(--accent-muted),
+        transparent
+      ),
+      var(--c-900);
+  }
+
+  .typing-dot {
+    animation: typingBounce 1.4s infinite ease-in-out both;
+  }
+
+  .typing-dot:nth-child(1) {
+    animation-delay: -0.32s;
+  }
+
+  .typing-dot:nth-child(2) {
+    animation-delay: -0.16s;
+  }
+
+  .typing-dot:nth-child(3) {
+    animation-delay: 0s;
+  }
+}
+
+/* ── Theme-aware border overrides ─────────────────────
+   Replaces hardcoded rgba(255,255,255,0.06) borders
+   ───────────────────────────────────────────────────── */
+[data-theme="light"] [class*="border-\[rgba\(255"],
+[data-theme="frost"] [class*="border-\[rgba\(255"],
+[data-theme="sequoia"] [class*="border-\[rgba\(255"] {
+  border-color: var(--border) !important;
+}
+[data-theme="light"] [class*="bg-\[rgba\(255"],
+[data-theme="frost"] [class*="bg-\[rgba\(255"],
+[data-theme="sequoia"] [class*="bg-\[rgba\(255"] {
+  background-color: var(--border) !important;
+}
+[data-theme="light"] .text-white,
+[data-theme="frost"] .text-white,
+[data-theme="sequoia"] .text-white {
+  color: #ffffff !important;
+}
+
+/* ── Sequoia premium visual overrides ─────────────── */
+
+/* Gradient accent buttons — only solid .bg-accent, NOT tints like bg-accent/5 */
+[data-theme="sequoia"] .bg-accent {
+  background: linear-gradient(135deg, #5856d6 0%, #af52de 100%) !important;
+  border: none !important;
+  box-shadow: 0 2px 12px rgba(88, 86, 214, 0.3), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="sequoia"] .bg-accent:hover {
+  box-shadow: 0 4px 20px rgba(88, 86, 214, 0.4), 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+  filter: brightness(1.05);
+}
+
+/* Glass panels — frosted vibrancy */
+[data-theme="sequoia"] .glass-panel {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+}
+
+/* Glass cards — elevated with depth */
+[data-theme="sequoia"] .glass-card {
+  background: rgba(255, 255, 255, 0.60);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  box-shadow:
+    0 0 0 0.5px rgba(0, 0, 0, 0.04),
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="sequoia"] .glass-card:hover {
+  box-shadow:
+    0 0 0 0.5px rgba(88, 86, 214, 0.15),
+    0 4px 16px rgba(0, 0, 0, 0.06),
+    0 12px 40px rgba(88, 86, 214, 0.1);
+  transform: translateY(-2px);
+  border-color: rgba(88, 86, 214, 0.15);
+}
+
+/* Body background — subtle warm gradient */
+[data-theme="sequoia"] body {
+  background:
+    radial-gradient(ellipse 100% 60% at 50% -10%, rgba(88, 86, 214, 0.04), transparent),
+    radial-gradient(ellipse 80% 50% at 100% 50%, rgba(175, 82, 222, 0.03), transparent),
+    #f5f5f7;
+}
+
+/* Glow accent — purple glow */
+[data-theme="sequoia"] .glow-accent {
+  box-shadow: 0 0 24px rgba(88, 86, 214, 0.15), 0 0 80px rgba(175, 82, 222, 0.06);
+}
+
+/* Search bar — elevated */
+[data-theme="sequoia"] input[type="text"],
+[data-theme="sequoia"] input[type="search"] {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04), 0 0 0 0.5px rgba(0, 0, 0, 0.03);
+  border-radius: 12px !important;
+}
+
+[data-theme="sequoia"] input[type="text"]:focus,
+[data-theme="sequoia"] input[type="search"]:focus {
+  border-color: rgba(88, 86, 214, 0.4) !important;
+  box-shadow: 0 0 0 3px rgba(88, 86, 214, 0.1), 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* ── Force white text on solid accent backgrounds ────
+   Uses high specificity to override text-dark-* rules.
+   Only targets solid accent, not light tints like bg-accent/5.
+   ──────────────────────────────────────────────────── */
+[data-theme="sequoia"] .bg-accent,
+[data-theme="sequoia"] .bg-accent *,
+[data-theme="sequoia"] .bg-accent svg,
+[data-theme="sequoia"] .bg-accent-hover,
+[data-theme="sequoia"] .bg-accent-hover *,
+[data-theme="sequoia"] .bg-accent-hover svg {
+  color: #ffffff !important;
+}
+
+/* Ensure user-bubble (which uses bg-[#5856d6]) also gets white text */
+[data-theme="sequoia"] [style*="background"][style*="5856d6"],
+[data-theme="sequoia"] [style*="background"][style*="5856d6"] * {
+  color: #ffffff !important;
+}
+
+/* Tab bars & pill containers — visible on light bg */
+[data-theme="sequoia"] [class*="bg-dark-500\/"],
+[data-theme="frost"] [class*="bg-dark-500\/"] {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="sequoia"] [class*="bg-dark-400\/"],
+[data-theme="frost"] [class*="bg-dark-400\/"] {
+  background-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Active tabs & selection highlights */
+[data-theme="sequoia"] [class*="bg-dark-400\/40"],
+[data-theme="frost"] [class*="bg-dark-400\/40"] {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08), 0 0 0 0.5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* ── Light theme text visibility (low priority, no !important) ── */
+/* These use the CSS variable system so they auto-adapt,
+   but we reinforce them for Tailwind utility classes */
+
+/* Quick action buttons & pill containers on light bg */
+[data-theme="sequoia"] [class*="bg-dark-500\/"],
+[data-theme="sequoia"] [class*="bg-dark-600\/"] {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ── Mobile helpers ────────────────────────────────── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes typingBounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Markdown in AI messages */
+.ai-markdown h1,
+.ai-markdown h2,
+.ai-markdown h3 {
+  @apply font-semibold mt-3 mb-1;
+  color: var(--c-50);
+}
+
+.ai-markdown h1 { @apply text-lg; }
+.ai-markdown h2 { @apply text-base; }
+.ai-markdown h3 { @apply text-sm; }
+
+.ai-markdown p {
+  @apply mb-2 last:mb-0 leading-relaxed;
+}
+
+.ai-markdown ul,
+.ai-markdown ol {
+  @apply ml-4 mb-2 space-y-1;
+}
+
+.ai-markdown ul { @apply list-disc; }
+.ai-markdown ol { @apply list-decimal; }
+
+.ai-markdown li { @apply text-sm; }
+
+.ai-markdown code {
+  @apply text-xs px-1.5 py-0.5 rounded-md font-mono;
+  background: var(--code-bg);
+  color: var(--accent-hover);
+}
+
+.ai-markdown pre {
+  @apply rounded-xl p-3 my-2 overflow-x-auto text-xs;
+  background: var(--pre-bg);
+}
+
+.ai-markdown pre code {
+  @apply bg-transparent p-0;
+  color: var(--c-50);
+}
+
+.ai-markdown strong {
+  @apply font-semibold;
+  color: var(--c-50);
+}
+
+.ai-markdown a {
+  color: var(--accent-hover);
+  @apply underline underline-offset-2;
+}
+
+.ai-markdown blockquote {
+  @apply border-l-2 pl-3 my-2 italic;
+  border-color: var(--accent);
+  color: var(--c-100);
+}
+
+.ai-markdown table {
+  @apply w-full my-2 text-sm;
+}
+
+.ai-markdown th {
+  @apply text-left font-semibold pb-2 border-b;
+  border-color: var(--border-strong);
+}
+
+.ai-markdown td {
+  @apply py-1.5 border-b;
+  border-color: var(--border);
+}
